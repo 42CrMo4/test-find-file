@@ -11,7 +11,7 @@ jobs:
           fetch-depth: 2
       - name: (CI) List files
         run: |
-          changedFiles=$(git diff --name-only HEAD^)
+          changedFiles=$(git diff HEAD^)
           for file in $changedFiles; do
             echo "Processing file: $file"
           done
